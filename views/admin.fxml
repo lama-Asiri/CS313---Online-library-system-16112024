@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane alignment="CENTER" hgap="10" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: fff;" stylesheets="@../resources/css/style.css" vgap="16.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OnlineLibrarySystem.controllers.AdminDashboardController">
+ 
+    <!-- Top buttons for settings and inventory -->
+<HBox alignment="CENTER" spacing="32.0" GridPane.rowIndex="0">
+<Button fx:id="b6" onAction="#openSystemSettings" text="System Settings" />
+<Label stylesheets="@../resources/css/title.css" text="Admin" />
+<Button fx:id="b5" onAction="#openLibraryInventory" text="Library's Inventory" />
+</HBox>
+ 
+    <!-- Search Field for User List -->
+<HBox alignment="CENTER" spacing="10" GridPane.rowIndex="1">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+      <TextField fx:id="searchField" layoutX="37.0" layoutY="1.0" onKeyReleased="#handleSearch" promptText="Enter email" />
+      <Button fx:id="b4" layoutX="197.0" layoutY="1.0" onAction="#handleSearchButton" text="Search" />
+      <Label layoutX="-16.0" layoutY="3.0" text="Search:" />
+      <ListView fx:id="userListView" layoutX="-2.0" layoutY="33.0" prefHeight="193.0" prefWidth="236.0" />
+         </children>
+      </AnchorPane>
+</HBox>
+ 
+    <!-- List of all registered users -->
+<VBox spacing="10" GridPane.rowIndex="2">
+<HBox alignment="CENTER" spacing="10">
+<Button fx:id="b3" onAction="#addUser" text="Add User" />
+<Button fx:id="b2" onAction="#removeUser" text="Remove User" />
+<Button fx:id="b1" onAction="#updateUser" text="Update User" />
+</HBox>
+</VBox>
+ 
+    <columnConstraints>
+<ColumnConstraints />
+</columnConstraints>
+<rowConstraints>
+<RowConstraints />
+<RowConstraints />
+<RowConstraints />
+</rowConstraints>
+</GridPane>

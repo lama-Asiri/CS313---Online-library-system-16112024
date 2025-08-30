@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="295.0" spacing="10.0" style="-fx-background-color: fff;" stylesheets="@../resources/css/style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OnlineLibrarySystem.controllers.AddUserController">
+   <children>
+      <TextField fx:id="emailField" alignment="TOP_LEFT" prefHeight="32.0" prefWidth="258.0" promptText="Email" />
+      <TextField fx:id="nameField" prefHeight="25.0" prefWidth="240.0" promptText="Name" />
+      <PasswordField fx:id="passwordField" prefHeight="32.0" prefWidth="189.0" promptText="Password" />
+      <TextField fx:id="phoneField" prefHeight="32.0" prefWidth="273.0" promptText="Phone" />
+      
+      <!-- Role selection -->
+      <HBox spacing="10">
+         <children>
+            <Label text="Role:" />
+            <RadioButton fx:id="adminRadio" text="Admin">
+               <toggleGroup>
+                  <ToggleGroup fx:id="roleGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="librarianRadio" text="Librarian" toggleGroup="$roleGroup" />
+            <RadioButton fx:id="studentRadio" text="Student" toggleGroup="$roleGroup" />
+         </children>
+      </HBox>
+      
+      <!-- Gender selection -->
+      <HBox prefHeight="17.0" prefWidth="243.0" spacing="10">
+         <children>
+            <Label alignment="CENTER" prefHeight="24.0" prefWidth="63.0" text="Gender:" />
+            <RadioButton fx:id="maleRadio" prefHeight="17.0" prefWidth="60.0" text="male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderGroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="femaleRadio" alignment="TOP_LEFT" text="female" toggleGroup="$genderGroup" />
+         </children>
+      </HBox>
+      
+      <!-- Save Button -->
+      <Button onAction="#saveUser" text="Save" />
+   </children>
+</VBox>

@@ -1,0 +1,246 @@
+/* General background and container styles */
+.root {
+    -fx-background-color: #f2f2f2; /* Light grey background for a clean, modern look */
+}
+
+/* VBox styling */
+.vbox {
+    -fx-background-color: white;
+    -fx-alignment: center;
+    -fx-border-radius: 15px; /* Rounded corners */
+    -fx-effect: dropshadow(gaussian, #d3d3d3, 8, 0.6, 5, 5); /* Subtle shadow for depth */
+    -fx-background-insets: 0, 1; /* Ensures background fills correctly */
+}
+
+/* Header text styling */
+.header-text {
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 28px;
+    -fx-text-fill: #9c7cb1; /* Soft lilac color */
+    -fx-effect: dropshadow(gaussian, #c5c5c5, 6, 0.7, 3, 3); /* Soft shadow for depth */
+}
+
+/* Label styling */
+.label {
+    -fx-font-size: 12px; /* Smaller font size for labels */
+    -fx-text-fill: #7e6d9a; /* Slightly darker lilac for labels */
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+
+/* TextField and PasswordField styles */
+.text-field, .password-field {
+    -fx-background-color: #f3e6f7; /* Very light lilac */
+    -fx-text-fill: #5d4e7e;
+    -fx-prompt-text-fill: #b3a0d1;
+    -fx-background-radius: 12px; /* Matches the border-radius */
+    -fx-border-radius: 12px; /* Rounded corners */
+    -fx-border-color: #e2c8f0;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+    -fx-padding: 5; /* Ensures text doesn't touch the edges */
+    -fx-background-insets: 0, 1; /* Fills correctly inside the border */
+    -fx-focus-color: #9c7cb1;
+}
+
+/* Focused state for text fields */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #9c7cb1;
+}
+
+/* Button styles */
+.button, .save-button {
+    -fx-background-color: linear-gradient(to right, #9c7cb1, #b3a0d1);
+    -fx-text-fill: white;
+    -fx-font-size: 16px; /* Restored original font size */
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-effect: dropshadow(gaussian, #c5c5c5, 8, 0.7, 3, 3); /* Shadow effect for depth */
+    -fx-transition: all 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+/* Button hover effect */
+.button:hover, .save-button:hover {
+    -fx-background-color: linear-gradient(to right, #a78fc2, #c2b1d3); /* Subtle color change on hover */
+    -fx-effect: dropshadow(gaussian, #a78fc2, 8, 0.7, 3, 3); /* Hover effect */
+}
+
+/* Button pressed effect */
+.button:pressed, .save-button:pressed {
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 5, 0.7, 2, 2);
+}
+
+/* GridPane adjustments */
+.grid-pane {
+    -fx-background-color: #f3f3f3; /* Light background for GridPane */
+    -fx-alignment: center;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, #d3d3d3, 10, 0.6, 5, 5); /* Soft shadow for depth */
+}
+
+/* HBox styling for containing multiple elements horizontally */
+.hbox {
+    -fx-alignment: center;
+}
+
+/* Search input field styling */
+.search-field {
+    -fx-background-color: #f3e6f7;
+    -fx-border-radius: 12px; /* Increased border-radius for rounder corners */
+    -fx-border-color: #e2c8f0;
+    -fx-font-size: 14px; /* Restored original font size */
+    -fx-pref-width: 200px;
+    -fx-text-fill: #5d4e7e;
+}
+
+/* Styling for the user info section (such as email and user list) */
+.user-info {
+    -fx-font-size: 14px; /* Restored original font size */
+    -fx-text-fill: #7e6d9a;
+    -fx-font-family: "Arial";
+}
+
+/* Highlight search result styling */
+.search-result-highlight {
+    -fx-background-color: #f8d7da; /* Light red background for error or non-match */
+    -fx-text-fill: #721c24;
+}
+
+/* Shadow effect for general elements */
+.shadow-effect {
+    -fx-effect: dropshadow(gaussian, #d3d3d3, 10, 0.7, 5, 5);
+}
+
+/* Styling for input fields (email, password, etc.) */
+.input-field {
+    -fx-background-color: #f0e3f4;
+    -fx-text-fill: #5d4e7e;
+    -fx-border-radius: 12px; /* Increased border-radius for rounder corners */
+    -fx-border-color: #e2c8f0;
+    -fx-font-size: 14px; /* Restored original font size */
+}
+
+.input-field:focused {
+    -fx-border-color: #9c7cb1;
+}
+
+/* Style for the back button across different pages */
+.back-button {
+    -fx-background-color: #c2b1d3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px; /* Restored original font size */
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.back-button:hover {
+    -fx-background-color: #a78fc2;
+}
+
+/* Styling for general container sections */
+.container {
+    -fx-background-radius: 15px;
+    -fx-alignment: center;
+}
+
+/* Styling for TextArea or ListView */
+.text-area, .list-view {
+    -fx-background-color: #f3e6f7; /* Very light lilac */
+    -fx-border-radius: 0px; /* Removed rounded corners */
+    -fx-border-color: transparent; /* No border color */
+   
+}
+
+/* General styling for ChoiceBox */
+/* General styling for ChoiceBox */
+/* General styling for ChoiceBox */
+.choice-box {
+    -fx-background-color: #f3e6f7; /* Light lilac background */
+    -fx-text-fill: #5d4e7e;
+    -fx-border-radius: 12px; /* Rounded corners */
+    -fx-background-radius: 12px; /* Rounded corners */
+    -fx-border-color: #e2c8f0;
+    -fx-font-size: 14px;
+    -fx-padding: 5; /* Ensures content is centered */
+    -fx-background-insets: 0, 1; /* Proper background placement */
+    -fx-focus-color: #9c7cb1;
+}
+.choice-box .list-cell {
+    -fx-background-color: #f3e6f7; /* Consistent dropdown background */
+    -fx-border-radius: 12px; /* Matches parent component */
+}
+
+/* Hover effect for the list items in the ChoiceBox */
+.choice-box .list-cell:hover {
+    -fx-background-color: #e2c8f0; /* Slightly darker lilac on hover */
+    -fx-text-fill: #5d4e7e; /* Keep text color consistent */
+}
+
+/* Styling for the arrow button of the ChoiceBox */
+.choice-box .arrow {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-shape: "M0,0 L10,10 L20,0 Z"; /* Custom arrow shape */
+    -fx-stroke: #5d4e7e; /* Arrow color */
+    -fx-stroke-width: 2px; /* Stroke width for the arrow */
+}
+
+/* Focused state for ChoiceBox */
+.choice-box:focused {
+    -fx-border-color: #9c7cb1; /* Focused border color to match text fields */
+} 
+/* General styling for RadioButton */
+/* General styling for RadioButton */
+.radio-button {
+    -fx-background-color: transparent; /* Transparent background */
+    -fx-text-fill: #7e6d9a; /* Darker lilac text color */
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px; /* Smaller font size */
+    -fx-font-weight: normal; /* Remove bold styling */
+    -fx-padding: 0; /* Remove padding */
+}
+
+/* Radio button selected styling */
+.radio-button:selected {
+    -fx-text-fill: #9c7cb1; /* Soft lilac for selected state */
+}
+
+/* Radio button in hover state */
+.radio-button:hover {
+    -fx-text-fill: #a78fc2; /* Slightly darker lilac on hover */
+}
+
+/* RadioButton check circle styling */
+.radio-button .radio-button-inner {
+    -fx-background-color: #e2c8f0; /* Light lilac circle */
+    -fx-background-radius: 50%; /* Circular background */
+    -fx-border-radius: 50%; /* Rounded border */
+    -fx-border-color: #e2c8f0; /* Matching border color */
+    -fx-border-width: 2px; /* Border width for the circle */
+}
+
+/* When radio button is selected, change inner circle color */
+.radio-button:selected .radio-button-inner {
+    -fx-background-color: #9c7cb1; /* Soft lilac when selected */
+    -fx-border-color: #9c7cb1; /* Border color to match */
+}
+
+/* When radio button is pressed, give it a slight effect */
+.radio-button:pressed .radio-button-inner {
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.7, 2, 2); /* Inner shadow when pressed */
+}
+
+/* Styling for the outer circle of the RadioButton (default state) */
+.radio-button .radio-button-out {
+    -fx-background-color: transparent; /* Transparent outer circle */
+    -fx-border-radius: 50%; /* Keep the outer circle rounded */
+    -fx-border-width: 2px; /* Border width for the outer circle */
+    -fx-border-color: #e2c8f0; /* Matching light lilac color */
+}
+
